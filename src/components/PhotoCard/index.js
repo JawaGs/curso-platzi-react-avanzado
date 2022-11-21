@@ -1,5 +1,7 @@
 import React from 'react'
 import { Button, ImgWrapper, Img } from './styles'
+import { MdFavoriteBorder } from 'react-icons/md'
+
 const DEFAULT_IMAGE = 'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60'
 
 export const PhotoCard = ({ id, likes = 0, src = DEFAULT_IMAGE }) => {
@@ -11,7 +13,7 @@ export const PhotoCard = ({ id, likes = 0, src = DEFAULT_IMAGE }) => {
         </ImgWrapper>
       </a>
       <Button>
-        {likes} likes!
+        <MdFavoriteBorder size='32px' /> {likes} likes!
       </Button>
     </article>
   )
